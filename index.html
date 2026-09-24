@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>For My Pretty Girl ❤️</title>
+
+
+    <style>
+
+        /* ==================================================
+           BASIC SETUP
+        ================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff8f5,
+                    #fce4ec,
+                    #dff8f7
+                );
+
+            font-family: Georgia, serif;
+
+            color: #3d3030;
+
+            text-align: center;
+
+            overflow-x: hidden;
+        }
+
+
+        /* ==================================================
+           FLOATING HEARTS
+        ================================================== */
+
+        .heart {
+
+            position: fixed;
+
+            bottom: -60px;
+
+            font-size: 25px;
+
+            opacity: 0.7;
+
+            animation:
+                floatUp 8s linear infinite;
+
+            pointer-events: none;
+
+            z-index: 5;
+        }
+
+
+        .heart:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart:nth-child(2) {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3) {
+            left: 55%;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(4) {
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+
+        @keyframes floatUp {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* ==================================================
+           OPENING
+        ================================================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 40px 20px;
+
+            position: relative;
+        }
+
+
+        .small-heart {
+
+            font-size: 60px;
+
+            animation:
+                heartbeat 1.5s infinite;
+        }
+
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.18);
+            }
+        }
+
+
+        h1 {
+
+            font-size:
+                clamp(
+                    42px,
+                    8vw,
+                    75px
+                );
+
+            margin: 15px 0 5px;
+
+            color: #3d3030;
+        }
+
+
+        .subtitle {
+
+            font-size:
+                clamp(
+                    20px,
+                    4vw,
+                    30px
+                );
+
+            margin: 5px 0;
+
+            color: #e85d75;
+
+            font-style: italic;
+        }
+
+
+        .date {
+
+            font-size: 18px;
+
+            margin: 20px 0 30px;
+
+            letter-spacing: 1px;
+        }
+
+
+        .intro {
+
+            max-width: 650px;
+
+            font-size: 19px;
+
+            line-height: 1.8;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ==================================================
+           BUTTON
+        ================================================== */
+
+        button {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e85d75,
+                    #d94363
+                );
+
+            color: white;
+
+            border: none;
+
+            padding:
+                17px 35px;
+
+            border-radius: 40px;
+
+            font-size: 18px;
+
+            font-family: Georgia, serif;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 20px
+                rgba(
+                    217,
+                    67,
+                    99,
+                    0.3
+                );
+
+            transition: 0.3s;
+        }
+
+
+        button:hover {
+
+            transform:
+                scale(1.08);
+
+            box-shadow:
+                0 12px 25px
+                rgba(
+                    217,
+                    67,
+                    99,
+                    0.4
+                );
+        }
+
+
+        /* ==================================================
+           GENERAL SECTIONS
+        ================================================== */
+
+        .section-title {
+
+            font-size: 38px;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* ==================================================
+           RELATIONSHIP TIMER
+        ================================================== */
+
+        #timer-section {
+
+            padding: 90px 20px;
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+
+        .timer-intro {
+
+            font-size: 18px;
+
+            margin-bottom: 35px;
+        }
+
+
+        .timer {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+
+        .time-box {
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.78
+                );
+
+            border-radius: 25px;
+
+            padding: 25px 10px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.08
+                );
+        }
+
+
+        .time-number {
+
+            display: block;
+
+            font-size: 35px;
+
+            font-weight: bold;
+
+            color: #e85d75;
+        }
+
+
+        .time-label {
+
+            font-size: 14px;
+
+            margin-top: 8px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+        }
+
+
+        /* ==================================================
+           OUR STORY
+        ================================================== */
+
+        #story {
+
+            padding:
+                100px 20px;
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+
+        .story-intro {
+
+            max-width: 650px;
+
+            margin:
+                0 auto 50px;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        .timeline {
+
+            position: relative;
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+
+        .timeline::before {
+
+            content: "";
+
+            position: absolute;
+
+            left: 50%;
+
+            top: 0;
+
+            bottom: 0;
+
+            width: 3px;
+
+            background:
+                rgba(
+                    232,
+                    93,
+                    117,
+                    0.35
+                );
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        .story-card {
+
+            position: relative;
+
+            width: 45%;
+
+            padding: 25px;
+
+            margin: 45px 0;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.78
+                );
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.08
+                );
+
+            transition: 0.3s;
+        }
+
+
+        .story-card:nth-child(odd) {
+            margin-right: auto;
+        }
+
+
+        .story-card:nth-child(even) {
+            margin-left: auto;
+        }
+
+
+        .story-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.12
+                );
+        }
+
+
+        .story-card h3 {
+
+            color: #e85d75;
+
+            font-size: 22px;
+        }
+
+
+        .story-card p {
+
+            line-height: 1.7;
+
+            font-size: 16px;
+        }
+
+
+        .story-heart {
+
+            font-size: 35px;
+        }
+
+
+        /* ==================================================
+           THINGS I LOVE ABOUT YOU
+        ================================================== */
+
+        #love {
+
+            padding:
+                100px 20px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .love-intro {
+
+            max-width: 700px;
+
+            margin:
+                0 auto 50px;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        .love-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+
+        .love-card {
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.82
+                );
+
+            padding: 30px 20px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 10px 30px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.08
+                );
+
+            cursor: pointer;
+
+            transition:
+                transform 0.3s,
+                box-shadow 0.3s;
+
+            min-height: 240px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+
+        .love-card:hover {
+
+            transform:
+                translateY(-10px)
+                scale(1.02);
+
+            box-shadow:
+                0 15px 35px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.13
+                );
+        }
+
+
+        .love-icon {
+
+            font-size: 50px;
+
+            margin-bottom: 10px;
+
+            animation:
+                lovePulse 1.8s infinite;
+        }
+
+
+        @keyframes lovePulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.12);
+            }
+        }
+
+
+        .love-card h3 {
+
+            color: #e85d75;
+
+            margin:
+                5px 0 15px;
+        }
+
+
+        .hidden-love {
+
+            display: none;
+
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            margin: 0;
+        }
+
+
+        .love-card.revealed {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #fff,
+                    #fff0f4
+                );
+        }
+
+
+        .love-card.revealed
+        .hidden-love {
+
+            display: block;
+
+            animation:
+                revealText 0.6s ease;
+        }
+
+
+        .love-card.revealed h3 {
+            display: none;
+        }
+
+
+        @keyframes revealText {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(10px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* ==================================================
+           HEART EXPLOSION
+        ================================================== */
+
+        .burst-heart {
+
+            position: fixed;
+
+            pointer-events: none;
+
+            font-size: 25px;
+
+            z-index: 9999;
+
+            animation:
+                burst 1s ease-out
+                forwards;
+        }
+
+
+        @keyframes burst {
+
+            0% {
+
+                opacity: 1;
+
+                transform:
+                    translate(0, 0)
+                    scale(0.5);
+            }
+
+            100% {
+
+                opacity: 0;
+
+                transform:
+                    translate(
+                        var(--x),
+                        var(--y)
+                    )
+                    scale(1.4);
+            }
+        }
+
+
+        /* ==================================================
+           SURPRISE
+        ================================================== */
+
+        #surprise {
+
+            display: none;
+
+            padding:
+                100px 20px;
+
+            animation:
+                surpriseFade 1.2s ease;
+        }
+
+
+        @keyframes surpriseFade {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    translateY(30px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    translateY(0);
+            }
+        }
+
+
+        /* ==================================================
+           LOVE LETTER
+        ================================================== */
+
+        #letter {
+
+            max-width: 1000px;
+
+            margin:
+                0 auto 80px;
+        }
+
+
+        #letter img {
+
+            width: 100%;
+
+            height: auto;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.15
+                );
+
+            transition:
+                transform 0.4s;
+        }
+
+
+        #letter img:hover {
+
+            transform:
+                scale(1.015);
+        }
+
+
+        .letter-caption {
+
+            font-size: 20px;
+
+            margin-bottom: 25px;
+
+            font-style: italic;
+
+            color: #e85d75;
+        }
+
+
+        /* ==================================================
+           VIDEO
+        ================================================== */
+
+        #video {
+
+            max-width: 900px;
+
+            margin: auto;
+        }
+
+
+        #video video {
+
+            width: 100%;
+
+            max-height: 600px;
+
+            border-radius: 25px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.2
+                );
+        }
+
+
+        .video-caption {
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            max-width: 650px;
+
+            margin:
+                25px auto;
+        }
+
+
+        /* ==================================================
+           SECRET MESSAGE
+        ================================================== */
+
+        #secret {
+
+            padding:
+                100px 20px 120px;
+
+            max-width: 800px;
+
+            margin: auto;
+        }
+
+
+        .secret-button {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #6c5ce7,
+                    #a29bfe
+                );
+
+            margin-top: 20px;
+        }
+
+
+        .secret-message {
+
+            display: none;
+
+            margin-top: 40px;
+
+            padding: 40px 30px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.85
+                );
+
+            box-shadow:
+                0 20px 50px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.12
+                );
+
+            animation:
+                secretReveal 1s ease;
+        }
+
+
+        .secret-message h3 {
+
+            color: #e85d75;
+
+            font-size: 30px;
+        }
+
+
+        .secret-message p {
+
+            font-size: 19px;
+
+            line-height: 1.9;
+        }
+
+
+        @keyframes secretReveal {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(0.9)
+                    translateY(20px);
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1)
+                    translateY(0);
+            }
+        }
+
+
+        /* ==================================================
+           SIGNATURE
+        ================================================== */
+
+        .signature {
+
+            margin-top: 70px;
+
+            font-size: 23px;
+
+            font-style: italic;
+
+            color: #e85d75;
+        }
+
+
+        /* ==================================================
+           MOBILE DESIGN
+        ================================================== */
+
+        @media (max-width: 800px) {
+
+            .timer {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .love-grid {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+
+            .timeline::before {
+
+                left: 20px;
+            }
+
+
+            .story-card,
+            .story-card:nth-child(odd),
+            .story-card:nth-child(even) {
+
+                width:
+                    calc(100% - 50px);
+
+                margin-left: 50px;
+
+                margin-right: 0;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            h1 {
+
+                font-size: 45px;
+            }
+
+
+            .subtitle {
+
+                font-size: 23px;
+            }
+
+
+            .date {
+
+                font-size: 15px;
+            }
+
+
+            .intro {
+
+                font-size: 17px;
+            }
+
+
+            .section-title {
+
+                font-size: 31px;
+            }
+
+
+            .love-grid {
+
+                grid-template-columns: 1fr;
+            }
+
+
+            .time-number {
+
+                font-size: 28px;
+            }
+
+
+            .time-label {
+
+                font-size: 11px;
+            }
+
+
+            .story-card {
+
+                padding: 20px;
+            }
+
+
+            #letter img {
+
+                border-radius: 12px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         FLOATING HEARTS
+    ================================================== -->
+
+    <div class="heart">❤️</div>
+    <div class="heart">💕</div>
+    <div class="heart">💗</div>
+    <div class="heart">💖</div>
+
+
+    <!-- ==================================================
+         OPENING
+    ================================================== -->
+
+    <section class="hero">
+
+        <div class="small-heart">
+            ❤️
+        </div>
+
+
+        <h1>
+            Happy Anniversary
+        </h1>
+
+
+        <div class="subtitle">
+            To My Pretty Girl
+        </div>
+
+
+        <div class="date">
+            September 24, 2024 · September 24, 2026
+        </div>
+
+
+        <p class="intro">
+
+            Two years of memories, love,
+            laughter, and moments that
+            I'll always cherish.
+
+            <br><br>
+
+            I made something special
+            just for you. ❤️
+
+        </p>
+
+
+        <button onclick="openSurprise()">
+
+            Open My Surprise 💌
+
+        </button>
+
+    </section>
+
+
+    <!-- ==================================================
+         RELATIONSHIP TIMER
+    ================================================== -->
+
+    <section id="timer-section">
+
+        <h2 class="section-title">
+            Together Since September 24, 2024 ❤️
+        </h2>
+
+
+        <p class="timer-intro">
+
+            And the clock is still counting... ⏳💕
+
+        </p>
+
+
+        <div class="timer">
+
+            <div class="time-box">
+
+                <span
+                    class="time-number"
+                    id="years"
+                >
+                    0
+                </span>
+
+                <span class="time-label">
+                    Years
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span
+                    class="time-number"
+                    id="days"
+                >
+                    0
+                </span>
+
+                <span class="time-label">
+                    Days
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span
+                    class="time-number"
+                    id="hours"
+                >
+                    0
+                </span>
+
+                <span class="time-label">
+                    Hours
+                </span>
+
+            </div>
+
+
+            <div class="time-box">
+
+                <span
+                    class="time-number"
+                    id="minutes"
+                >
+                    0
+                </span>
+
+                <span class="time-label">
+                    Minutes
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         OUR STORY
+    ================================================== -->
+
+    <section id="story">
+
+        <h2 class="section-title">
+            Our Story ❤️
+        </h2>
+
+
+        <p class="story-intro">
+
+            Every chapter with you means
+            something to me.
+
+            Here's a little look at
+            our journey together.
+
+        </p>
+
+
+        <div class="timeline">
+
+
+            <div class="story-card">
+
+                <div class="story-heart">
+                    ❤️
+                </div>
+
+                <h3>
+                    September 24, 2024
+                </h3>
+
+                <p>
+
+                    The day our story
+                    officially began.
+
+                    I didn't know all the
+                    memories we would create,
+                    but I'm so grateful I got
+                    to start this journey
+                    with you.
+
+                </p>
+
+            </div>
+
+
+            <div class="story-card">
+
+                <div class="story-heart">
+                    💕
+                </div>
+
+                <h3>
+                    Our Memories
+                </h3>
+
+                <p>
+
+                    From the laughs and
+                    conversations to the
+                    little moments that
+                    became special,
+
+                    every memory with you
+                    became another reason
+                    to appreciate you.
+
+                </p>
+
+            </div>
+
+
+            <div class="story-card">
+
+                <div class="story-heart">
+                    💗
+                </div>
+
+                <h3>
+                    Growing Together
+                </h3>
+
+                <p>
+
+                    We've continued learning,
+                    growing, and making our
+                    relationship our own.
+
+                    And there's still so much
+                    more of our story left
+                    to write.
+
+                </p>
+
+            </div>
+
+
+            <div class="story-card">
+
+                <div class="story-heart">
+                    💖
+                </div>
+
+                <h3>
+                    September 24, 2026
+                </h3>
+
+                <p>
+
+                    Two years later,
+                    I'm still grateful
+                    for you.
+
+                    Happy Anniversary,
+                    Pretty Girl. ❤️
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         THINGS I LOVE ABOUT YOU
+    ================================================== -->
+
+    <section id="love">
+
+        <h2 class="section-title">
+            Things I Love About You 💗
+        </h2>
+
+
+        <p class="love-intro">
+
+            I could probably make this list
+            forever, but here are just a few
+            of the things that make you
+            absolutely special to me.
+
+            <br>
+
+            Click each heart. ❤️
+
+        </p>
+
+
+        <div class="love-grid">
+
+
+            <!-- PATIENCE -->
+
+            <div
+                class="love-card"
+                onclick="revealLove(this)"
+            >
+
+                <div class="love-icon">
+                    🌷
+                </div>
+
+                <h3>
+                    Your Patience
+                </h3>
+
+                <p class="hidden-love">
+
+                    I love your patience.
+
+                    The way you give things
+                    time, listen, and don't
+                    give up easily means
+                    more to me than you know.
+
+                </p>
+
+            </div>
+
+
+            <!-- CARING -->
+
+            <div
+                class="love-card"
+                onclick="revealLove(this)"
+            >
+
+                <div class="love-icon">
+                    💕
+                </div>
+
+                <h3>
+                    Your Caring Nature
+                </h3>
+
+                <p class="hidden-love">
+
+                    You have such a caring
+                    heart.
+
+                    The way you care about
+                    the people you love is
+                    one of the things that
+                    makes you beautiful
+                    inside and out.
+
+                </p>
+
+            </div>
+
+
+            <!-- SPIRIT -->
+
+            <div
+                class="love-card"
+                onclick="revealLove(this)"
+            >
+
+                <div class="love-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Your Beautiful Spirit
+                </h3>
+
+                <p class="hidden-love">
+
+                    Your spirit is beautiful.
+
+                    There's something about
+                    the way you carry yourself
+                    and bring your own energy
+                    into a room that I love.
+
+                </p>
+
+            </div>
+
+
+            <!-- SMILE -->
+
+            <div
+                class="love-card"
+                onclick="revealLove(this)"
+            >
+
+                <div class="love-icon">
+                    😊
+                </div>
+
+                <h3>
+                    Your Smile
+                </h3>
+
+                <p class="hidden-love">
+
+                    Your smile is one of my
+                    favorite things in the
+                    world.
+
+                    Seeing you genuinely happy
+                    can instantly make my day
+                    better.
+
+                </p>
+
+            </div>
+
+
+            <!-- BROWN EYES -->
+
+            <div
+                class="love-card"
+                onclick="revealLove(this)"
+            >
+
+                <div class="love-icon">
+                    🤎
+                </div>
+
+                <h3>
+                    Your Breathtaking Brown Eyes
+                </h3>
+
+                <p class="hidden-love">
+
+                    Your brown eyes are
+                    breathtaking.
+
+                    There are moments when I
+                    can look at you and honestly
+                    forget what I was about
+                    to say.
+
+                </p>
+
+            </div>
+
+
+            <!-- BEAUTY -->
+
+            <div
+                class="love-card"
+                onclick="revealLove(this)"
+            >
+
+                <div class="love-icon">
+                    🌹
+                </div>
+
+                <h3>
+                    Your Beauty
+                </h3>
+
+                <p class="hidden-love">
+
+                    You're beautiful in ways
+                    that go far beyond what
+                    anyone can see.
+
+                    Your heart, your personality,
+                    your smile, your spirit —
+                    all of it makes you beautiful
+                    to me.
+
+                </p>
+
+            </div>
+
+
+            <!-- LAUGH -->
+
+            <div
+                class="love-card"
+                onclick="revealLove(this)"
+            >
+
+                <div class="love-icon">
+                    😂
+                </div>
+
+                <h3>
+                    Your Laugh
+                </h3>
+
+                <p class="hidden-love">
+
+                    I love hearing you laugh.
+
+                    Those moments when you're
+                    genuinely happy are moments
+                    I wish I could save forever.
+
+                </p>
+
+            </div>
+
+
+            <!-- HEART -->
+
+            <div
+                class="love-card"
+                onclick="revealLove(this)"
+            >
+
+                <div class="love-icon">
+                    ❤️
+                </div>
+
+                <h3>
+                    Your Heart
+                </h3>
+
+                <p class="hidden-love">
+
+                    Your heart is something
+                    I never want to take for
+                    granted.
+
+                    I'm grateful for the love
+                    you give and everything
+                    you bring into my life.
+
+                </p>
+
+            </div>
+
+
+            <!-- EVERYTHING -->
+
+            <div
+                class="love-card"
+                onclick="revealLove(this)"
+            >
+
+                <div class="love-icon">
+                    💖
+                </div>
+
+                <h3>
+                    Simply You
+                </h3>
+
+                <p class="hidden-love">
+
+                    At the end of the day,
+                    it's simply you.
+
+                    I don't love you because
+                    of one thing.
+
+                    I love all the little
+                    things that make you
+                    who you are.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         SURPRISE
+    ================================================== -->
+
+    <section id="surprise">
+
+        <h2 class="section-title">
+            For My Pretty Girl ❤️
+        </h2>
+
+
+        <!-- LOVE LETTER -->
+
+        <div id="letter">
+
+            <p class="letter-caption">
+
+                A little piece of my heart,
+                written just for you. 💌
+
+            </p>
+
+
+            <img
+                src="images/love-letter.png"
+                alt="My Anniversary Love Letter"
+            >
+
+        </div>
+
+
+        <!-- VIDEO -->
+
+        <div id="video">
+
+            <h2 class="section-title">
+                Our Special Video 🎬❤️
+            </h2>
+
+
+            <p class="video-caption">
+
+                A little memory made with love,
+                just for us.
+
+            </p>
+
+
+            <video
+                controls
+                playsinline
+            >
+
+                <source
+                    src="video/Add a subheading.mp4"
+                    type="video/mp4"
+                >
+
+                Your browser does not support
+                the video.
+
+            </video>
+
+        </div>
+
+
+        <!-- SECRET MESSAGE -->
+
+        <section id="secret">
+
+            <h2 class="section-title">
+                One More Thing... 💌
+            </h2>
+
+
+            <p>
+
+                You thought that was everything?
+
+                <br>
+
+                I have one more thing
+                I want you to see.
+
+            </p>
+
+
+            <button
+                class="secret-button"
+                onclick="revealSecret()"
+            >
+
+                Open My Secret Message 💖
+
+            </button>
+
+
+            <div
+                class="secret-message"
+                id="secretMessage"
+            >
+
+                <h3>
+                    To My Pretty Girl ❤️
+                </h3>
+
+
+                <p>
+
+                    Two years ago, we started
+                    something that became one
+                    of the most meaningful parts
+                    of my life.
+
+                    <br><br>
+
+                    I appreciate your patience,
+                    your caring heart, your
+                    beautiful spirit, your smile,
+                    your breathtaking brown eyes,
+                    and every little thing that
+                    makes you who you are.
+
+                    <br><br>
+
+                    I don't know exactly what
+                    every chapter of our future
+                    will look like, but I know
+                    I'm grateful that I get to
+                    experience this chapter
+                    with you.
+
+                    <br><br>
+
+                    Thank you for being you.
+
+                    <br><br>
+
+                    Happy Anniversary,
+                    Pretty Girl.
+
+                    <br><br>
+
+                    I love you. ❤️
+
+                    <br><br>
+
+                    — Ty
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <div class="signature">
+
+            Made with love by Ty ❤️
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+
+        /* ==================================================
+           OPEN SURPRISE
+        ================================================== */
+
+        function openSurprise() {
+
+            const surprise =
+                document.getElementById(
+                    "surprise"
+                );
+
+
+            surprise.style.display =
+                "block";
+
+
+            surprise.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+
+            createHeartExplosion(
+                window.innerWidth / 2,
+                window.innerHeight / 2
+            );
+        }
+
+
+
+        /* ==================================================
+           LOVE CARD REVEAL
+        ================================================== */
+
+        function revealLove(card) {
+
+            card.classList.toggle(
+                "revealed"
+            );
+
+
+            const rect =
+                card.getBoundingClientRect();
+
+
+            createHeartExplosion(
+
+                rect.left +
+                rect.width / 2,
+
+                rect.top +
+                rect.height / 2
+
+            );
+
+        }
+
+
+
+        /* ==================================================
+           SECRET MESSAGE
+        ================================================== */
+
+        function revealSecret() {
+
+            const message =
+                document.getElementById(
+                    "secretMessage"
+                );
+
+
+            message.style.display =
+                "block";
+
+
+            message.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+
+            createHeartExplosion(
+
+                window.innerWidth / 2,
+
+                window.innerHeight / 2
+
+            );
+
+        }
+
+
+
+        /* ==================================================
+           HEART EXPLOSION
+        ================================================== */
+
+        function createHeartExplosion(
+            centerX,
+            centerY
+        ) {
+
+            const hearts = [
+                "❤️",
+                "💕",
+                "💗",
+                "💖",
+                "💘"
+            ];
+
+
+            for (
+                let i = 0;
+                i < 18;
+                i++
+            ) {
+
+                const heart =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                heart.className =
+                    "burst-heart";
+
+
+                heart.textContent =
+                    hearts[
+                        Math.floor(
+                            Math.random() *
+                            hearts.length
+                        )
+                    ];
+
+
+                heart.style.left =
+                    centerX + "px";
+
+
+                heart.style.top =
+                    centerY + "px";
+
+
+                const angle =
+                    Math.random() *
+                    Math.PI * 2;
+
+
+                const distance =
+                    80 +
+                    Math.random() * 180;
+
+
+                const x =
+                    Math.cos(angle) *
+                    distance;
+
+
+                const y =
+                    Math.sin(angle) *
+                    distance;
+
+
+                heart.style.setProperty(
+                    "--x",
+                    x + "px"
+                );
+
+
+                heart.style.setProperty(
+                    "--y",
+                    y + "px"
+                );
+
+
+                document.body.appendChild(
+                    heart
+                );
+
+
+                setTimeout(
+                    () => {
+                        heart.remove();
+                    },
+                    1000
+                );
+
+            }
+
+        }
+
+
+
+        /* ==================================================
+           RELATIONSHIP TIMER
+        ================================================== */
+
+        const anniversaryDate =
+            new Date(
+                "2024-09-24T00:00:00"
+            );
+
+
+        function updateTimer() {
+
+            const now =
+                new Date();
+
+
+            let difference =
+                now - anniversaryDate;
+
+
+            if (difference < 0) {
+
+                difference = 0;
+
+            }
+
+
+            const totalSeconds =
+                Math.floor(
+                    difference / 1000
+                );
+
+
+            const totalMinutes =
+                Math.floor(
+                    totalSeconds / 60
+                );
+
+
+            const totalHours =
+                Math.floor(
+                    totalMinutes / 60
+                );
+
+
+            const totalDays =
+                Math.floor(
+                    totalHours / 24
+                );
+
+
+            const years =
+                Math.floor(
+                    totalDays / 365.2425
+                );
+
+
+            const remainingDays =
+                Math.floor(
+                    totalDays -
+                    years * 365.2425
+                );
+
+
+            const remainingHours =
+                totalHours % 24;
+
+
+            const remainingMinutes =
+                totalMinutes % 60;
+
+
+            document.getElementById(
+                "years"
+            ).textContent =
+                years;
+
+
+            document.getElementById(
+                "days"
+            ).textContent =
+                remainingDays;
+
+
+            document.getElementById(
+                "hours"
+            ).textContent =
+                remainingHours;
+
+
+            document.getElementById(
+                "minutes"
+            ).textContent =
+                remainingMinutes;
+
+        }
+
+
+        updateTimer();
+
+
+        setInterval(
+            updateTimer,
+            1000
+        );
+
+
+        /* ==================================================
+           CLICK ANYWHERE FOR SUBTLE HEART EFFECT
+        ================================================== */
+
+        document.addEventListener(
+            "click",
+            function(event) {
+
+                if (
+                    event.target.tagName ===
+                    "BUTTON"
+                ) {
+                    return;
+                }
+
+
+                if (
+                    event.target.closest(
+                        ".love-card"
+                    )
+                ) {
+                    return;
+                }
+
+
+                if (
+                    event.target.closest(
+                        "video"
+                    )
+                ) {
+                    return;
+                }
+
+
+                const heart =
+                    document.createElement(
+                        "div"
+                    );
+
+
+                heart.className =
+                    "burst-heart";
+
+
+                heart.textContent =
+                    "💗";
+
+
+                heart.style.left =
+                    event.clientX + "px";
+
+
+                heart.style.top =
+                    event.clientY + "px";
+
+
+                heart.style.setProperty(
+                    "--x",
+                    (
+                        Math.random() *
+                        80 - 40
+                    ) + "px"
+                );
+
+
+                heart.style.setProperty(
+                    "--y",
+                    (
+                        -50 -
+                        Math.random() *
+                        80
+                    ) + "px"
+                );
+
+
+                document.body.appendChild(
+                    heart
+                );
+
+
+                setTimeout(
+                    () => {
+                        heart.remove();
+                    },
+                    1000
+                );
+
+            }
+        );
+
+
+    </script>
+
+</body>
+
+</html>
+```
